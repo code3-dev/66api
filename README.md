@@ -1,99 +1,228 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+# 66API
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+66API is a simple API built with NestJS to perform various date-related operations, such as calculating age, converting between Gregorian and Shamsi dates, and finding the difference between two dates. The API supports both `GET` and `POST` requests.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+This API can be deployed and run on Vercel.
 
-## Description
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/code3-dev/66api)
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+---
 
-## Project setup
+### Demo
+You can try out the API live at: [https://66api.vercel.app/](https://66api.vercel.app/).
 
+---
+
+## Running the API
+
+### 1. Clone the Repository
+```bash
+$ git clone https://github.com/code3-dev/66api.git
+$ cd 66api
+```
+
+### 2. Install Dependencies
 ```bash
 $ npm install
 ```
 
-## Compile and run the project
-
+### 3. Development Mode
 ```bash
-# development
 $ npm run start
+```
 
-# watch mode
+### 4. Watch Mode
+```bash
 $ npm run start:dev
+```
 
-# production mode
+### 5. Production Mode
+```bash
 $ npm run start:prod
 ```
 
-## Run tests
-
+### 6. Build the Application
 ```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+$ npm run build
 ```
 
-## Deployment
-
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
-
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
-
+### 7. Run the Production Server
 ```bash
-$ npm install -g mau
-$ mau deploy
+$ node dist/main.js
 ```
 
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
+---
 
-## Resources
+### 1. Get Current Time
+- **Endpoint (GET):**
+  ```
+  http://localhost:3000/get/time
+  ```
+  **Description:** Returns the current time.
 
-Check out a few resources that may come in handy when working with NestJS:
+- **Endpoint (GET):**
+  ```
+  http://localhost:3000/get/image
+  ```
+  **Description:** Returns the current time as an image.
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+---
 
-## Support
+### 2. Calculate Age
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+#### 2.1 Age Calculation with Gregorian Date
+- **Endpoint (GET):**
+  ```
+  http://localhost:3000/age/gregorian?birthdate=2005-02-10
+  ```
+  **Description:** Calculates the age based on the provided Gregorian birthdate.
 
-## Stay in touch
+- **Endpoint (POST):**
+  ```
+  http://localhost:3000/age/gregorian
+  ```
+  **Request Header:**
+  ```
+  Content-Type: application/json
+  ```
+  **Request Body:**
+  ```json
+  {
+    "birthdate": "2005-02-10"
+  }
+  ```
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+#### 2.2 Age Calculation with Shamsi Date
+- **Endpoint (GET):**
+  ```
+  http://localhost:3000/age/shamsi?birthdate=1383/11/22
+  ```
+  **Description:** Calculates the age based on the provided Shamsi birthdate.
 
-## License
+- **Endpoint (POST):**
+  ```
+  http://localhost:3000/age/shamsi
+  ```
+  **Request Header:**
+  ```
+  Content-Type: application/json
+  ```
+  **Request Body:**
+  ```json
+  {
+    "birthdate": "1383/11/22"
+  }
+  ```
 
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+---
+
+### 3. Date Conversion
+
+#### 3.1 Convert Gregorian Date to Shamsi
+- **Endpoint (GET):**
+  ```
+  http://localhost:3000/conversion/gregorian-to-shamsi?gregorianDate=2005-02-10
+  ```
+  **Description:** Converts the given Gregorian date to Shamsi.
+
+- **Endpoint (POST):**
+  ```
+  http://localhost:3000/conversion/gregorian-to-shamsi
+  ```
+  **Request Header:**
+  ```
+  Content-Type: application/json
+  ```
+  **Request Body:**
+  ```json
+  {
+    "gregorianDate": "2005-02-10"
+  }
+  ```
+
+#### 3.2 Convert Shamsi Date to Gregorian
+- **Endpoint (GET):**
+  ```
+  http://localhost:3000/conversion/shamsi-to-gregorian?shamsiDate=1383/01/22
+  ```
+  **Description:** Converts the given Shamsi date to Gregorian.
+
+- **Endpoint (POST):**
+  ```
+  http://localhost:3000/conversion/shamsi-to-gregorian
+  ```
+  **Request Header:**
+  ```
+  Content-Type: application/json
+  ```
+  **Request Body:**
+  ```json
+  {
+    "shamsiDate": "1383/01/22"
+  }
+  ```
+
+---
+
+### 4. Calculate Time Difference
+
+#### 4.1 Difference Between Two Shamsi Dates
+- **Endpoint (GET):**
+  ```
+  http://localhost:3000/diff/shamsi?startDate=1402/10/12&endDate=1403/10/12
+  ```
+  **Description:** Calculates the difference between two Shamsi dates.
+
+- **Endpoint (POST):**
+  ```
+  http://localhost:3000/diff/shamsi
+  ```
+  **Request Header:**
+  ```
+  Content-Type: application/json
+  ```
+  **Request Body:**
+  ```json
+  {
+    "startDate": "1402/10/01",
+    "endDate": "1403/10/04"
+  }
+  ```
+
+#### 4.2 Difference Between Two Gregorian Dates
+- **Endpoint (GET):**
+  ```
+  http://localhost:3000/diff/gregorian?startDate=2024-01-01&endDate=2024-12-25
+  ```
+  **Description:** Calculates the difference between two Gregorian dates.
+
+- **Endpoint (POST):**
+  ```
+  http://localhost:3000/diff/gregorian
+  ```
+  **Request Header:**
+  ```
+  Content-Type: application/json
+  ```
+  **Request Body:**
+  ```json
+  {
+    "startDate": "2024-01-01",
+    "endDate": "2024-12-25"
+  }
+  ```
+
+---
+
+## General Notes
+- All `POST` requests should include the `Content-Type: application/json` header.
+- The date format for Gregorian dates is `YYYY-MM-DD`, and for Shamsi dates, it is `YYYY/MM/DD`.
+
+## Contact
+
+For any queries or issues, please contact:
+
+- **Name:** Hossein Pira
+- **Email:** [h3dev.pira@gmail.com](mailto:h3dev.pira@gmail.com)
+- **Instagram**: [@h3dev.pira](https://instagram.com/h3dev.pira)
+- **Telegram:** [@h3dev](https://t.me/h3dev)
