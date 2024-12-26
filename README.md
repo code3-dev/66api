@@ -52,6 +52,7 @@ $ node dist/main.js
 ```
 
 ---
+## API Documentation
 
 ### 1. Get Current Time
 - **Endpoint (GET):**
