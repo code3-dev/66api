@@ -1,6 +1,6 @@
 import { Controller, Post, Body, Get, Query } from '@nestjs/common';
-import * as moment from 'moment';
-import * as momentJalaali from 'moment-jalaali';
+import moment from 'moment';
+import momentJalaali from 'moment-jalaali';
 
 @Controller('age')
 export class AgeController {

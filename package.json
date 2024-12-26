@@ -1,6 +1,6 @@
 {
   "name": "66-api",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "simple apis with nestjs",
   "author": "Hossein Pira",
   "license": "MIT",
